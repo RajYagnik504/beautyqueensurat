@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Queen - Your One Stop Beauty Destination</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #1a1a2e; /* Deep purple */
+            --secondary-color: #e91e8b; /* Pink */
+            --accent-color: #d4a853; /* Gold */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 5px rgba(0,0,0,0.05);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--bg-white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #c21570;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(233, 30, 139, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        /* 1. TOP BAR */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .top-bar-left {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .top-bar-left span i {
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+        
+        .top-bar-right {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .top-bar-right a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* 2. HEADER */
+        .header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .header-icon {
+            font-size: 18px;
+            color: var(--primary-color);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .header-icon:hover {
+            color: var(--secondary-color);
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* 3. HERO SECTION */
+        .hero {
+            padding: 0;
+            background-color: var(--bg-light);
+            height: 550px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-container {
+            display: flex;
+            width: 100%;
+            height: 550px;
+        }
+        
+        .hero-content {
+            width: 45%;
+            padding: 60px 40px 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4a 100%);
+            color: white;
+            z-index: 2;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.2s;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.4s;
+        }
+        
+        .hero-title span {
+            color: var(--secondary-color);
+        }
+        
+        .hero-desc {
+            font-size: 16px;
+            color: #d1d1d1;
+            margin-bottom: 35px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.6s;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.8s;
+        }
+        
+        .hero-btn-alt {
+            background-color: transparent;
+            color: var(--bg-white);
+            border: 2px solid var(--bg-white);
+        }
+        
+        .hero-btn-alt:hover {
+            background-color: var(--bg-white);
+            color: var(--primary-color);
+        }
+        
+        .hero-slider {
+            width: 55%;
+            position: relative;
+            height: 550px;
+            background: #1a1a2e;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #1a1a2e;
+        }
+        
+        .slider-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .dot.active {
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 4. FEATURES STRIP */
+        .features-strip {
+            padding: 30px 0;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 30px;
+            color: var(--secondary-color);
+        }
+        
+        .feature-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        
+        .feature-item:not(:last-child) {
+            border-right: 1px solid var(--border-color);
+        }
+        
+        /* 5. SHOP BY CATEGORY */
+        .categories {
+            background-color: var(--bg-light);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .category-card {
+            border-radius: 10px;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+            z-index: -1;
+            transition: var(--transition);
+        }
+        
+        .cat-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+        .cat-2 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+        .cat-3 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+        .cat-4 { background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); }
+        .cat-5 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+        .cat-6 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        
+        .category-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .category-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .category-card:hover::before {
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.1));
+        }
+        
+        /* 6. BEST SELLERS */
+        .best-sellers {
+            background-color: var(--bg-white);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .product-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 3px;
+            z-index: 2;
+        }
+        
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding-top: 100%;
+        }
+        
+        .product-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-brand {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .product-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            height: 48px;
+            overflow: hidden;
+        }
+        
+        .product-rating {
+            color: #ffb800;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            margin-bottom: 15px;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        
+        .new-price {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .add-to-cart-btn {
+            width: 100%;
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+        
+        .product-card:hover .add-to-cart-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* 7. PROMOTIONAL BANNERS */
+        .promo-banners {
+            padding: 40px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .promo-card {
+            height: 250px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .promo-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at top right, rgba(255,255,255,0.2) 0%, transparent 60%);
+            z-index: -1;
+        }
+        
+        .promo-1 {
+            background: linear-gradient(135deg, #e91e8b 0%, #9c27b0 100%);
+        }
+        
+        .promo-2 {
+            background: linear-gradient(135deg, #1a1a2e 0%, #4a4a75 100%);
+        }
+        
+        .promo-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .promo-2 .promo-title {
+            color: var(--accent-color);
+        }
+        
+        .promo-desc {
+            font-size: 16px;
+            margin-bottom: 25px;
+            max-width: 80%;
+        }
+        
+        .promo-btn {
+            align-self: flex-start;
+            padding: 10px 25px;
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+        
+        .promo-1 .promo-btn { color: #e91e8b; }
+        
+        .promo-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* 8. BRANDS SECTION */
+        .brands {
+            background: linear-gradient(135deg, #1a1a2e 0%, #301b3f 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .brands .section-title h2 {
+            color: white;
+        }
+        
+        .brands .section-title h2::after {
+            background-color: var(--accent-color);
+        }
+        
+        .brand-board-wrapper {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            position: relative;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        
+        .brand-board-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #d4a853, #e91e8b, #d4a853);
+            border-radius: 17px;
+            z-index: 0;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+        
+        .brand-board-img {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            width: 100%;
+            display: block;
+        }
+        
+        @keyframes borderGlow {
+            0% { box-shadow: 0 0 10px rgba(212, 168, 83, 0.5); }
+            100% { box-shadow: 0 0 25px rgba(233, 30, 139, 0.8); }
+        }
+        
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, #1a1a2e, transparent);
+        }
+        
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, #1a1a2e, transparent);
+        }
+        
+        .marquee-track {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .marquee-track-2 {
+            animation: marquee 25s linear infinite reverse;
+        }
+        
+        .marquee-track-3 {
+            animation: marquee 22s linear infinite;
+        }
+        
+        .marquee-container:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        
+        .brand-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 0 15px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .brand-badge.glow-purple:hover { box-shadow: 0 0 15px #9c27b0; border-color: #9c27b0; background-color: rgba(156, 39, 176, 0.2); }
+        .brand-badge.glow-gold:hover { box-shadow: 0 0 15px var(--accent-color); border-color: var(--accent-color); background-color: rgba(212, 168, 83, 0.2); }
+        .brand-badge.glow-pink:hover { box-shadow: 0 0 15px var(--secondary-color); border-color: var(--secondary-color); background-color: rgba(233, 30, 139, 0.2); }
+        .brand-badge.glow-white:hover { box-shadow: 0 0 15px #fff; border-color: #fff; background-color: rgba(255, 255, 255, 0.2); color: #fff; }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .brands-count-badge {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .brands-count-badge span {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, var(--secondary-color), #9c27b0);
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(233, 30, 139, 0.4);
+        }
+        
+        /* 9. STORE SHOWCASE */
+        .store-showcase {
+            background-color: var(--bg-white);
+        }
+        
+        .store-container {
+            display: flex;
+            background-color: var(--bg-light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .store-image {
+            width: 50%;
+        }
+        
+        .store-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .store-info {
+            width: 50%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .store-name {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .store-detail {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .store-detail i {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        
+        .store-detail-text h4 {
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .store-detail-text p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .store-map {
+            margin-top: 20px;
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        
+        .map-placeholder {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e5e5e5;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        /* 10. BLOG SECTION */
+        .blog {
+            background-color: var(--bg-light);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .blog-image-gradient {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 50px;
+        }
+        
+        .blog-1 .blog-image-gradient { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); color: #e91e8b; }
+        .blog-2 .blog-image-gradient { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); color: #1a1a2e; }
+        .blog-3 .blog-image-gradient { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #d4a853; }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .blog-tag {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .blog-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+        
+        .blog-title:hover {
+            color: var(--secondary-color);
+        }
+        
+        .blog-excerpt {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .read-more i {
+            margin-left: 8px;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* 11. NEWSLETTER */
+        .newsletter {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            background-color: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .newsletter-form input {
+            flex-grow: 1;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px 0 0 50px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            outline: none;
+        }
+        
+        .newsletter-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* 12. FOOTER */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .footer-logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .footer-about {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-widget h3 {
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .footer-links a::before {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 8px;
+            font-size: 12px;
+            color: var(--secondary-color);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .footer-contact-item i {
+            color: var(--secondary-color);
+            font-size: 18px;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        /* 13. COPYRIGHT BAR */
+        .copyright {
+            background-color: #111122;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .copyright-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright-text {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            color: #888;
+            font-size: 24px;
+        }
+        
+        /* 14. EXTRAS */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 85px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 99;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        .mobile-toolbar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+            padding: 10px 0;
+        }
+        
+        .toolbar-inner {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .toolbar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .toolbar-item i {
+            font-size: 20px;
+            margin-bottom: 3px;
+            color: var(--primary-color);
+        }
+        
+        .toolbar-item.active {
+            color: var(--secondary-color);
+        }
+        
+        .toolbar-item.active i {
+            color: var(--secondary-color);
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .hero-content {
+                padding: 40px;
+            }
+            .hero-title {
+                font-size: 36px;
+            }
+            .features-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .feature-item:nth-child(2) {
+                border-right: none;
+            }
+            .feature-item:nth-child(1), .feature-item:nth-child(2) {
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 20px;
+            }
+            .feature-item:nth-child(3), .feature-item:nth-child(4) {
+                padding-top: 20px;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-bar {
+                display: none;
+            }
+            .nav-links {
+                display: none; /* Mobile menu hidden by default */
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .header .container {
+                padding: 5px 15px;
+            }
+            .hero {
+                height: auto;
+            }
+            .hero-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .hero-content, .hero-slider {
+                width: 100%;
+            }
+            .hero-content {
+                padding: 40px 20px;
+                text-align: center;
+                align-items: center;
+            }
+            .hero-slider {
+                height: 350px;
+                min-height: 300px;
+            }
+            .store-container {
+                flex-direction: column;
+            }
+            .store-image, .store-info {
+                width: 100%;
+            }
+            .promo-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 10px;
+                background: transparent;
+                box-shadow: none;
+                gap: 10px;
+            }
+            .newsletter-form input {
+                border-radius: 5px;
+                padding: 15px;
+            }
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+            .copyright-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .mobile-toolbar {
+                display: block;
+            }
+            body {
+                padding-bottom: 60px; /* Space for mobile toolbar */
+            }
+            .whatsapp-float {
+                bottom: 80px;
+            }
+            .scroll-top {
+                bottom: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            .features-container {
+                grid-template-columns: 1fr;
+            }
+            .feature-item {
+                border-right: none !important;
+                border-bottom: 1px solid var(--border-color);
+                padding: 15px 0 !important;
+            }
+            .feature-item:last-child {
+                border-bottom: none;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        /* HEADER ACTIONS & LOGIN/REG BUTTON */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-login-reg {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(233, 30, 139, 0.25);
+        }
+
+        .btn-login-reg:hover {
+            background-color: #c2185b;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(233, 30, 139, 0.35);
+        }
+
+        /* AUTH POPUP MODAL CSS */
+        .auth-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .auth-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .auth-modal-box {
+            background: white;
+            width: 90%;
+            max-width: 420px;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-20px);
+            transition: var(--transition);
+        }
+
+        .auth-modal-overlay.active .auth-modal-box {
+            transform: translateY(0);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .modal-close-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .auth-tab-btn {
+            flex: 1;
+            padding: 10px;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #888;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .auth-tab-btn.active {
+            color: var(--secondary-color);
+        }
+
+        .auth-tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--primary-color);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            border-color: var(--secondary-color);
+        }
+
+        .auth-submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .auth-submit-btn:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+919649978722"><i class="fas fa-phone"></i> +91 9649978722</a>
+                <a href="mailto:shreebalajienterprise092@gmail.com"><i class="fas fa-envelope"></i> shreebalajienterprise092@gmail.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Shop Num.92, Shree Krishna AC Mall, Dindoli, Surat</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.jpg" alt="BeautyQueen Logo" class="logo-img" onerror="this.src='https://placehold.co/50x50/e91e8b/fff?text=BQ'">
+                <div class="logo-text">Beauty<span>Queen</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#brands">Brands</a>
+                <a href="#blog">Blog</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-login-reg" id="openAuthBtn">
+                    <i class="far fa-user"></i> Login / Register
+                </button>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-subtitle">Welcome to Beauty Queen</div>
+                <h1 class="hero-title">Your <span>One Stop</span> Beauty Destination</h1>
+                <p class="hero-desc">Experience luxury beauty with 100% original products. Get amazing discounts 365 days a year on top international and Indian brands.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Visit Store</button>
+                    <button class="btn hero-btn-alt">Our Brands</button>
+                </div>
+            </div>
+            
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="images/slide1.png" alt="Lakme Collection" onerror="this.src='https://placehold.co/800x600/1a1a2e/fff?text=Lakme+Products'">
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.png" alt="Gliss Shampoo" onerror="this.src='https://placehold.co/800x600/e91e8b/fff?text=Premium+Haircare'">
+                </div>
+                <div class="slide">
+                    <img src="images/slide3.png" alt="Vaseline Products" onerror="this.src='https://placehold.co/800x600/d4a853/fff?text=Skincare+Essentials'">
+                </div>
+                
+                <div class="slider-controls">
+                    <div class="dot active" onclick="currentSlide(0)"></div>
+                    <div class="dot" onclick="currentSlide(1)"></div>
+                    <div class="dot" onclick="currentSlide(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURES STRIP -->
+    <div class="features-strip">
+        <div class="container">
+            <div class="features-container">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="feature-text">365 Days Open</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="feature-text">100% Original</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-crown"></i></div>
+                    <div class="feature-text">500+ Brands</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <div class="feature-text">Best Prices</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. BRANDS SECTION -->
+    <section class="brands" id="brands">
+        <div class="container">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Brand Partners</h2>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="brand-badge glow-purple">L'Oreal Paris</span>
+                    <span class="brand-badge glow-gold">Maybelline</span>
+                    <span class="brand-badge glow-pink">Sugar</span>
+                    <span class="brand-badge glow-white">Colorbar</span>
+                    <span class="brand-badge glow-purple">Swiss Beauty</span>
+                    <span class="brand-badge glow-gold">Wella</span>
+                    <span class="brand-badge glow-pink">Matrix</span>
+                    <span class="brand-badge glow-white">Pilgrim</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="brand-badge glow-purple">L'Oreal Paris</span>
+                    <span class="brand-badge glow-gold">Maybelline</span>
+                    <span class="brand-badge glow-pink">Sugar</span>
+                    <span class="brand-badge glow-white">Colorbar</span>
+                </div>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-track marquee-track-2">
+                    <span class="brand-badge glow-white">Luxliss</span>
+                    <span class="brand-badge glow-pink">Neutrogena</span>
+                    <span class="brand-badge glow-gold">Cetaphil</span>
+                    <span class="brand-badge glow-purple">Sebamed</span>
+                    <span class="brand-badge glow-white">Aveeno</span>
+                    <span class="brand-badge glow-pink">Mamaearth</span>
+                    <span class="brand-badge glow-gold">Minimalist</span>
+                    <span class="brand-badge glow-purple">Dr. Rashel</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="brand-badge glow-white">Luxliss</span>
+                    <span class="brand-badge glow-pink">Neutrogena</span>
+                    <span class="brand-badge glow-gold">Cetaphil</span>
+                    <span class="brand-badge glow-purple">Sebamed</span>
+                </div>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-track marquee-track-3">
+                    <span class="brand-badge glow-gold">Plum</span>
+                    <span class="brand-badge glow-purple">Dove</span>
+                    <span class="brand-badge glow-white">Biotique</span>
+                    <span class="brand-badge glow-pink">Garnier</span>
+                    <span class="brand-badge glow-gold">Lotus Herbals</span>
+                    <span class="brand-badge glow-purple">Mothercare</span>
+                    <span class="brand-badge glow-white">Chicco</span>
+                    <span class="brand-badge glow-pink">Ustraa</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="brand-badge glow-gold">Plum</span>
+                    <span class="brand-badge glow-purple">Dove</span>
+                    <span class="brand-badge glow-white">Biotique</span>
+                    <span class="brand-badge glow-pink">Garnier</span>
+                </div>
+            </div>
+            
+            <div class="brands-count-badge">
+                <span>40+ Premium Brands & Counting</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SHOP BY CATEGORY -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shop By Category</h2>
+            </div>
+            
+            <div class="category-grid">
+                <a href="#" class="category-card cat-1">
+                    <i class="fas fa-cut category-icon"></i>
+                    <h3 class="category-name">Hair Care</h3>
+                </a>
+                <a href="#" class="category-card cat-2">
+                    <i class="fas fa-spa category-icon"></i>
+                    <h3 class="category-name">Skin Care</h3>
+                </a>
+                <a href="#" class="category-card cat-3">
+                    <i class="fas fa-paint-brush category-icon"></i>
+                    <h3 class="category-name">Makeup</h3>
+                </a>
+                <a href="#" class="category-card cat-4">
+                    <i class="fas fa-spray-can category-icon"></i>
+                    <h3 class="category-name">Fragrances</h3>
+                </a>
+                <a href="#" class="category-card cat-5">
+                    <i class="fas fa-heart category-icon"></i>
+                    <h3 class="category-name">Personal Care</h3>
+                </a>
+                <a href="#" class="category-card cat-6">
+                    <i class="far fa-gem category-icon"></i>
+                    <h3 class="category-name">Accessories</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROMOTIONAL BANNERS -->
+    <section class="promo-banners">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card promo-1">
+                    <h3 class="promo-title">365 Days Discount</h3>
+                    <p class="promo-desc">Get amazing deals every single day on top beauty brands.</p>
+                    <a href="#" class="promo-btn">Explore Brands</a>
+                </div>
+                
+                <div class="promo-card promo-2">
+                    <h3 class="promo-title">100% Original</h3>
+                    <p class="promo-desc">Guaranteed authentic brands sourced directly from manufacturers.</p>
+                    <a href="#" class="promo-btn">Explore Brands</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. STORE SHOWCASE -->
+    <section class="store-showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Our Store</h2>
+            </div>
+            
+            <div class="store-container">
+                <div class="store-image">
+                    <img src="images/store.png" alt="Beauty Queen Store Front" onerror="this.src='https://placehold.co/600x500/e91e8b/fff?text=Store+Front+Image'">
+                </div>
+                <div class="store-info">
+                    <h3 class="store-name">Beauty Queen Premium Store</h3>
+                    
+                    <div class="store-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="store-detail-text">
+                            <h4>Address</h4>
+                            <p>Beauty Queen The Cosmetic Store, Shop Num.92,<br>Shree Krishna AC Mall, beside SMC Community Hall,<br>near Flower Garden Road, Royal Star Town ship,<br>Dindoli, Surat, Gujarat 394210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="store-detail">
+                        <i class="fas fa-phone"></i>
+                        <div class="store-detail-text">
+                            <h4>Contact Us</h4>
+                            <p><a href="tel:+919649978722">+91 96499 78722</a> <br> <a href="mailto:shreebalajienterprise092@gmail.com">shreebalajienterprise092@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="store-detail">
+                        <i class="fas fa-clock"></i>
+                        <div class="store-detail-text">
+                            <h4>Store Timings</h4>
+                            <p>10:00 AM - 10:00 PM (Every Day of Week)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="store-map">
+                        <iframe src="https://maps.google.com/maps?q=Shree+Krishna+AC+Mall,+Dindoli,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. BLOG SECTION -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Beauty Tips & Trends</h2>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog 1 -->
+                <div class="blog-card blog-1">
+                    <div class="blog-image-gradient">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>15 Aug 2026</span>
+                            <span class="blog-tag">Skincare</span>
+                        </div>
+                        <h3 class="blog-title">10 Must-Have Skincare Products for Glowing Skin</h3>
+                        <p class="blog-excerpt">Discover the essential products you need to add to your daily routine for that perfect, radiant glow.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="blog-card blog-2">
+                    <div class="blog-image-gradient">
+                        <i class="fas fa-air-freshener"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>28 Aug 2026</span>
+                            <span class="blog-tag">Hair Care</span>
+                        </div>
+                        <h3 class="blog-title">Hair Care Routine: Tips for Healthy & Shiny Hair</h3>
+                        <p class="blog-excerpt">Transform your dull hair into shiny, healthy locks with this simple yet effective weekly hair care routine.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="blog-card blog-3">
+                    <div class="blog-image-gradient">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>05 Sep 2026</span>
+                            <span class="blog-tag">Makeup</span>
+                        </div>
+                        <h3 class="blog-title">Makeup Trends 2026: What's Hot This Season</h3>
+                        <p class="blog-excerpt">Stay ahead of the curve with our comprehensive guide to the biggest makeup trends taking over this year.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest beauty tips, exclusive offers and new product updates directly in your inbox.</p>
+            
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Logo" onerror="this.src='https://placehold.co/40x40/e91e8b/fff?text=BQ'">
+                        <span class="footer-logo-text">Beauty Queen</span>
+                    </div>
+                    <p class="footer-about">Your ultimate destination for premium cosmetics and personal care products. We bring you 100% authentic products from top global brands at the best prices, 365 days a year.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#brands">Our Brands</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Shop Num.92, Shree Krishna AC Mall, beside SMC Community Hall, Dindoli, Surat 394210</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+919649978722" style="color:inherit;">+91 96499 78722</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:shreebalajienterprise092@gmail.com" style="color:inherit;">shreebalajienterprise092@gmail.com</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 AM - 10:00 PM (Every Day of Week)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. COPYRIGHT BAR -->
+    <div class="copyright">
+        <div class="container copyright-container">
+            <div class="copyright-text">
+                Rights are reserved by Shree Balaji Enterprise 2026
+            </div>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 14. EXTRAS -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <a href="#" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <div class="mobile-toolbar">
+        <div class="toolbar-inner">
+            <a href="index.html" class="toolbar-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#brands" class="toolbar-item">
+                <i class="fas fa-crown"></i>
+                <span>Brands</span>
+            </a>
+            <a href="#" class="toolbar-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="#" class="toolbar-item">
+                <i class="far fa-user"></i>
+                <span>Account</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Hero Slider Logic
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+        
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+        
+        // Auto rotate slides every 4 seconds
+        setInterval(nextSlide, 4000);
+        
+        // Sticky Header & Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const scrollTopBtn = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+            }
+            
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Scroll to Top action
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({
+    <!-- AUTH POPUP MODAL -->
+    <div class="auth-modal-overlay" id="authModal">
+        <div class="auth-modal-box">
+            <button class="modal-close-btn" id="closeAuthBtn">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" id="tabLoginBtn" onclick="switchAuthTab('login')">Sign In</button>
+                <button class="auth-tab-btn" id="tabRegisterBtn" onclick="switchAuthTab('register')">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form class="auth-form active" id="loginForm" onsubmit="event.preventDefault(); alert('Logged in successfully!'); closeModal();">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="auth-submit-btn">Sign In</button>
+            </form>
+            
+            <!-- Register Form -->
+            <form class="auth-form" id="registerForm" onsubmit="event.preventDefault(); alert('Account registered successfully!'); closeModal();">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create password" required>
+                </div>
+                <button type="submit" class="auth-submit-btn">Register Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Hero Slider Logic
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+        
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+        
+        setInterval(nextSlide, 4000);
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Auth Modal Popup Logic
+        const authModal = document.getElementById('authModal');
+        const openAuthBtn = document.getElementById('openAuthBtn');
+        const closeAuthBtn = document.getElementById('closeAuthBtn');
+        const tabLoginBtn = document.getElementById('tabLoginBtn');
+        const tabRegisterBtn = document.getElementById('tabRegisterBtn');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        function openModal(tab = 'login') {
+            if (authModal) {
+                authModal.classList.add('active');
+                switchAuthTab(tab);
+            }
+        }
+
+        function closeModal() {
+            if (authModal) {
+                authModal.classList.remove('active');
+            }
+        }
+
+        function switchAuthTab(tab) {
+            if (tab === 'login') {
+                if(tabLoginBtn) tabLoginBtn.classList.add('active');
+                if(tabRegisterBtn) tabRegisterBtn.classList.remove('active');
+                if(loginForm) loginForm.classList.add('active');
+                if(registerForm) registerForm.classList.remove('active');
+            } else {
+                if(tabRegisterBtn) tabRegisterBtn.classList.add('active');
+                if(tabLoginBtn) tabLoginBtn.classList.remove('active');
+                if(registerForm) registerForm.classList.add('active');
+                if(loginForm) loginForm.classList.remove('active');
+            }
+        }
+
+        if (openAuthBtn) {
+            openAuthBtn.addEventListener('click', () => openModal('login'));
+        }
+        if (closeAuthBtn) {
+            closeAuthBtn.addEventListener('click', closeModal);
+        }
+        if (authModal) {
+            authModal.addEventListener('click', (e) => {
+                if (e.target === authModal) closeModal();
+            });
+        }
+    </script>
+</body>
+</html>

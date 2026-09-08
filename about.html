@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BeautyQueen | Your Trusted Beauty Destination</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #1a1a2e; /* Deep purple */
+            --secondary-color: #e91e8b; /* Pink */
+            --accent-color: #d4a853; /* Gold */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 5px rgba(0,0,0,0.05);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* TOP BAR */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 13px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .top-bar-left a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #dddddd;
+        }
+        
+        .top-bar-left a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .top-bar-right a {
+            color: #dddddd;
+            font-size: 14px;
+        }
+        
+        .top-bar-right a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* HEADER */
+        .header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a.active::after,
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .btn-login-reg {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-login-reg:hover {
+            background-color: #c21773;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 22px;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* PAGE BANNER */
+        .page-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2a1b4e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .page-banner h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .breadcrumbs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--accent-color);
+        }
+        
+        .breadcrumbs a {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+        
+        .breadcrumbs a:hover {
+            opacity: 1;
+            color: var(--secondary-color);
+        }
+
+        /* ABOUT SECTION CONTENT */
+        .about-page-section {
+            padding: 70px 0;
+        }
+
+        .about-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(233, 30, 139, 0.95);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .about-badge .years {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .about-badge .text {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-hero-content .subtitle {
+            color: var(--secondary-color);
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .about-hero-content h2 {
+            font-size: 34px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-hero-content p {
+            color: var(--text-light);
+            font-size: 15px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        .highlight-quote {
+            background-color: #fdf2f8;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #4a154b;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        /* PILLARS / FEATURES GRID */
+        .pillars-section {
+            background-color: var(--bg-light);
+            padding: 60px 0;
+            margin-bottom: 70px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pillar-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--secondary-color), #ff6b8b);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px auto;
+        }
+
+        .pillar-card h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* PROMISE SECTION */
+        .promise-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2e1045 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promise-box h2 {
+            font-size: 32px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .promise-box p {
+            font-size: 17px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* SINGLE FLAGSHIP STORE SHOWCASE */
+        .flagship-store-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        .store-card-single {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .store-card-info {
+            padding: 40px;
+        }
+
+        .store-card-info h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .store-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .store-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .store-info-item i {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        .store-info-item h4 {
+            font-size: 15px;
+            color: var(--primary-color);
+            margin-bottom: 3px;
+        }
+
+        .store-info-item p, .store-info-item a {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .store-info-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        .store-card-map {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .footer-socials a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .footer-widget h3 {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 14px;
+            gap: 12px;
+        }
+
+        .footer-contact-item i {
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin-top: 3px;
+        }
+
+        .copyright {
+            background-color: #111122;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .copyright-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 12px;
+            font-size: 22px;
+            color: #aaa;
+        }
+
+        /* MODAL */
+        .auth-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .auth-modal-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .auth-modal {
+            background: #ffffff;
+            width: 100%;
+            max-width: 440px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transform: scale(0.85);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .auth-modal-backdrop.active .auth-modal {
+            transform: scale(1);
+        }
+
+        .auth-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            background: rgba(0,0,0,0.05);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            background: #f8f9fa;
+        }
+
+        .auth-tab-btn {
+            flex: 1;
+            padding: 16px;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #666;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .auth-tab-btn.active {
+            color: var(--secondary-color);
+            background: #ffffff;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .auth-body {
+            padding: 30px 25px;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .auth-form h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .auth-form p.sub {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--secondary-color);
+        }
+
+        .btn-auth-submit {
+            width: 100%;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-auth-submit:hover {
+            background: #c21773;
+        }
+
+        /* FLOATING BUTTONS */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 95px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .about-hero-grid, .store-card-single, .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .copyright-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+919649978722"><i class="fas fa-phone"></i> +91 9649978722</a>
+                <a href="mailto:shreebalajienterprise092@gmail.com"><i class="fas fa-envelope"></i> shreebalajienterprise092@gmail.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Shop Num.92, Shree Krishna AC Mall, Dindoli, Surat</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.jpg" alt="BeautyQueen Logo" class="logo-img" onerror="this.src='https://placehold.co/50x50/e91e8b/fff?text=BQ'">
+                <div class="logo-text">Beauty<span>Queen</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="index.html#brands">Brands</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-login-reg" id="openAuthBtn">
+                    <i class="far fa-user"></i> Login / Register
+                </button>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+        <div class="container">
+            <h1>About BeautyQueen</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>About Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN ABOUT SECTION -->
+    <section class="about-page-section">
+        <div class="container">
+            
+            <!-- HERO STORY GRID -->
+            <div class="about-hero-grid">
+                <div class="about-image-wrapper">
+                    <img src="images/store.png" alt="BeautyQueen Store Front" onerror="this.src='https://placehold.co/600x500/1a1a2e/e91e8b?text=BeautyQueen+Store'">
+                    <div class="about-badge">
+                        <div class="years">6+</div>
+                        <div class="text">Years of Excellence</div>
+                    </div>
+                </div>
+
+                <div class="about-hero-content">
+                    <span class="subtitle">Welcome to BeautyQueen</span>
+                    <h2>Your Trusted Beauty Destination in Surat</h2>
+                    <p>At <strong>BeautyQueen</strong>, we’re passionate about helping you unlock your full beauty potential. That’s why we offer an extensive range of 100% original products from renowned global brands and local favorites. Our commitment to authenticity and quality ensures that every product on our shelves meets the highest standards.</p>
+                    
+                    <div class="highlight-quote">
+                        "From garments to glamour, we’re thrilled to introduce BeautyQueen, the latest venture from the team that brought you 2nd Chance, Surat’s beloved fashion hub since 1989. After dressing Surat in style, we’re now dedicated to making the city sparkle with beauty!"
+                    </div>
+
+                    <p>We believe that beauty care should be an empowering and delightful experience. Whether you are searching for everyday skincare essentials, luxury fragrances, or professional makeup items, BeautyQueen brings the finest collection right to your doorstep in Surat.</p>
+                </div>
+            </div>
+
+            <!-- PILLARS GRID -->
+            <div class="pillars-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Why Choose BeautyQueen?</h2>
+                        <p>Delivering quality, convenience, and authenticity with every purchase.</p>
+                    </div>
+
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-clock"></i></div>
+                            <h3>Convenience Guaranteed</h3>
+                            <p>We know your time is precious, which is why we’re open <strong>10:00 AM to 10:00 PM every day of the week</strong>! Whether you need a quick beauty fix or a complete makeover, our doors are always open to welcome you.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-tags"></i></div>
+                            <h3>Discounts All Year Round</h3>
+                            <p>We believe everyone deserves to feel beautiful without breaking the bank. That’s why we offer discounts on all products throughout the year. Yes, every day is a discount day at BeautyQueen!</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-heart"></i></div>
+                            <h3>6 Years of Love & Loyalty</h3>
+                            <p>We’re thrilled to celebrate 6 incredible years in Surat! We couldn’t have done it without the love and support from our amazing customers. Your trust means the world to us.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUR PROMISE BANNER -->
+            <div class="promise-box">
+                <h2>Our Promise to You</h2>
+                <p>At BeautyQueen, we’re dedicated to delivering exceptional customer service, expert advice, and unbeatable prices. Our goal is to make every visit to our store an unforgettable experience, leaving you feeling confident, beautiful, and eager to return.</p>
+            </div>
+
+            <!-- FLAGSHIP STORE SHOWCASE -->
+            <div class="flagship-store-section">
+                <div class="section-title">
+                    <h2>Visit Our Flagship Store</h2>
+                    <p>Experience Surat's premier cosmetic store in person.</p>
+                </div>
+
+                <div class="store-card-single">
+                    <div class="store-card-info">
+                        <h3>BeautyQueen The Cosmetic Store</h3>
+                        <div class="store-info-list">
+                            <div class="store-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Store Address</h4>
+                                    <p>Shop Num.92, Shree Krishna AC Mall, beside SMC Community Hall, near Flower Garden Road, Royal Star Township, Dindoli, Surat, Gujarat 394210</p>
+                                </div>
+                            </div>
+                            <div class="store-info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone / Support</h4>
+                                    <p><a href="tel:+919649978722">+91 96499 78722</a></p>
+                                </div>
+                            </div>
+                            <div class="store-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p><a href="mailto:shreebalajienterprise092@gmail.com">shreebalajienterprise092@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="store-info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Store Hours</h4>
+                                    <p>10:00 AM - 10:00 PM (Every Day of Week)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="store-card-map">
+                        <iframe src="https://maps.google.com/maps?q=Shree+Krishna+AC+Mall,+Dindoli,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <div class="logo-text" style="color:white;">Beauty<span style="color:var(--secondary-color)">Queen</span></div>
+                    <p class="footer-about">Your ultimate destination for premium cosmetics and personal care products in Surat. 100% authentic products from top global brands at unbeatable prices.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#brands">Our Brands</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Shop Num.92, Shree Krishna AC Mall, Dindoli, Surat 394210</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+919649978722" style="color:inherit;">+91 96499 78722</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:shreebalajienterprise092@gmail.com" style="color:inherit;">shreebalajienterprise092@gmail.com</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 AM - 10:00 PM (Every Day of Week)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COPYRIGHT BAR -->
+    <div class="copyright">
+        <div class="container copyright-container">
+            <div class="copyright-text">
+                Rights are reserved by Shree Balaji Enterprise 2026
+            </div>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div class="auth-modal-backdrop" id="authModal">
+        <div class="auth-modal">
+            <button class="auth-close-btn" id="closeAuthBtn"><i class="fas fa-times"></i></button>
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" id="signInTab">Sign In</button>
+                <button class="auth-tab-btn" id="registerTab">Register</button>
+            </div>
+            <div class="auth-body">
+                <form class="auth-form active" id="signInForm">
+                    <h3>Welcome Back</h3>
+                    <p class="sub">Sign in to your BeautyQueen account</p>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn-auth-submit">Sign In</button>
+                </form>
+                <form class="auth-form" id="registerForm">
+                    <h3>Create Account</h3>
+                    <p class="sub">Join BeautyQueen for exclusive offers</p>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Create password" required>
+                    </div>
+                    <button type="submit" class="btn-auth-submit">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="https://wa.me/919649978722" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="scroll-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Modal logic
+        const openAuthBtn = document.getElementById('openAuthBtn');
+        const closeAuthBtn = document.getElementById('closeAuthBtn');
+        const authModal = document.getElementById('authModal');
+        const signInTab = document.getElementById('signInTab');
+        const registerTab = document.getElementById('registerTab');
+        const signInForm = document.getElementById('signInForm');
+        const registerForm = document.getElementById('registerForm');
+
+        if(openAuthBtn) {
+            openAuthBtn.addEventListener('click', () => authModal.classList.add('active'));
+        }
+        if(closeAuthBtn) {
+            closeAuthBtn.addEventListener('click', () => authModal.classList.remove('active'));
+        }
+        if(authModal) {
+            authModal.addEventListener('click', (e) => {
+                if(e.target === authModal) authModal.classList.remove('active');
+            });
+        }
+
+        if(signInTab && registerTab) {
+            signInTab.addEventListener('click', () => {
+                signInTab.classList.add('active');
+                registerTab.classList.remove('active');
+                signInForm.classList.add('active');
+                registerForm.classList.remove('active');
+            });
+
+            registerTab.addEventListener('click', () => {
+                registerTab.classList.add('active');
+                signInTab.classList.remove('active');
+                registerForm.classList.add('active');
+                signInForm.classList.remove('active');
+            });
+        }
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
