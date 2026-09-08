@@ -96,10 +96,11 @@
         }
         
         .top-bar-left a {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             color: #dddddd;
+            white-space: nowrap;
         }
         
         .top-bar-left a:hover {
@@ -886,6 +887,7 @@
         }
 
         @media (max-width: 768px) {
+            .top-bar { display: none; }
             .mobile-toolbar { display: block; }
             body { padding-bottom: 55px; }
             .whatsapp-float { bottom: 75px; }
