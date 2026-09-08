@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - BeautyQueen | Get In Touch</title>
+    <title>Our Brands - BeautyQueen | 40+ Premium Brands</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -262,161 +262,115 @@
             color: var(--secondary-color);
         }
 
-        /* CONTACT SECTION */
-        .contact-page-section {
+        /* BRANDS PAGE MAIN */
+        .brands-page-section {
             padding: 70px 0;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .contact-form-card {
-            background: white;
-            border-radius: 16px;
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* BRAND BOARD SHOWCASE */
+        .brand-board-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a1b4e 100%);
+            border-radius: 20px;
             padding: 40px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 60px;
+            border: 2px solid var(--accent-color);
         }
 
-        .contact-form-card h2 {
-            font-size: 26px;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .contact-form-card p.desc {
-            color: var(--text-light);
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .form-group-c {
-            margin-bottom: 20px;
-        }
-
-        .form-group-c label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .form-group-c input,
-        .form-group-c textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: inherit;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-group-c input:focus,
-        .form-group-c textarea:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(233, 30, 139, 0.1);
-        }
-
-        .btn-contact-submit {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-        }
-
-        .btn-contact-submit:hover {
-            background-color: #c21773;
-            transform: translateY(-2px);
-        }
-
-        /* RIGHT SIDE CONTACT CARDS + MAP */
-        .contact-info-map-column {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .contact-cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .contact-card-box {
-            background: white;
-            padding: 25px 20px;
+        .brand-board-box img {
+            max-width: 100%;
             border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .contact-card-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(233, 30, 139, 0.1);
-            color: var(--secondary-color);
-            border-radius: 10px;
+        /* CATEGORY FILTER BUTTONS */
+        .brand-filters {
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
         }
 
-        .contact-card-details h4 {
-            font-size: 15px;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-        }
-
-        .contact-card-details p,
-        .contact-card-details a {
-            color: var(--text-light);
-            font-size: 13px;
-            line-height: 1.5;
-        }
-
-        .contact-card-details a:hover {
-            color: var(--secondary-color);
-        }
-
-        .map-card-wrapper {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
+        .brand-filter-btn {
+            padding: 10px 24px;
+            border-radius: 25px;
+            background: #f0f0f5;
             border: 1px solid var(--border-color);
-            height: 380px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .map-card-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .brand-filter-btn.active,
+        .brand-filter-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* BRANDS GRID */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .brand-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-color);
+        }
+
+        .brand-logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-category-tag {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--secondary-color);
+            background: rgba(233, 30, 139, 0.1);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 600;
         }
 
         /* FOOTER */
@@ -728,8 +682,8 @@
 
         /* RESPONSIVE */
         @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .brands-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
@@ -743,8 +697,8 @@
         }
 
         @media (max-width: 576px) {
-            .form-row, .contact-cards-grid {
-                grid-template-columns: 1fr;
+            .brands-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -786,9 +740,9 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
-                <a href="brands.html">Brands</a>
+                <a href="brands.html" class="active">Brands</a>
                 <a href="blog.html">Blog</a>
-                <a href="contact.html" class="active">Contact Us</a>
+                <a href="contact.html">Contact Us</a>
             </nav>
             
             <div class="header-actions">
@@ -803,98 +757,106 @@
     <!-- PAGE BANNER -->
     <div class="page-banner">
         <div class="container">
-            <h1>Contact Us</h1>
+            <h1>Our Brand Partners</h1>
             <div class="breadcrumbs">
-                <a href="index.html">Home</a> / <span>Contact Us</span>
+                <a href="index.html">Home</a> / <span>Brands</span>
             </div>
         </div>
     </div>
 
-    <!-- MAIN CONTACT SECTION -->
-    <section class="contact-page-section">
+    <!-- MAIN BRANDS SECTION -->
+    <section class="brands-page-section">
         <div class="container">
-            
-            <div class="contact-grid">
-                <!-- LEFT FORM CARD -->
-                <div class="contact-form-card">
-                    <h2>Send Us a Message</h2>
-                    <p class="desc">Have questions about products, availability, or store location? Write to us and we'll get back to you promptly.</p>
-
-                    <form id="contactPageForm">
-                        <div class="form-row">
-                            <div class="form-group-c">
-                                <label>Your Name *</label>
-                                <input type="text" placeholder="Enter full name" required>
-                            </div>
-                            <div class="form-group-c">
-                                <label>Phone Number *</label>
-                                <input type="tel" placeholder="+91 XXXXX XXXXX" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group-c">
-                            <label>Email Address *</label>
-                            <input type="email" placeholder="example@domain.com" required>
-                        </div>
-
-                        <div class="form-group-c">
-                            <label>Subject</label>
-                            <input type="text" placeholder="Product query, store info, etc.">
-                        </div>
-
-                        <div class="form-group-c">
-                            <label>Message *</label>
-                            <textarea rows="5" placeholder="Write your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-contact-submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-
-                <!-- RIGHT INFO & MAP -->
-                <div class="contact-info-map-column">
-                    <div class="contact-cards-grid">
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Store Location</h4>
-                                <p>Shop Num.92, Shree Krishna AC Mall, Dindoli, Surat 394210</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Phone Support</h4>
-                                <p><a href="tel:+919649978722">+91 96499 78722</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Email Us</h4>
-                                <p><a href="mailto:shreebalajienterprise092@gmail.com">shreebalaji enterprise092 @gmail.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Store Hours</h4>
-                                <p>10:00 AM - 10:00 PM<br>(Every Day of Week)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="map-card-wrapper">
-                        <iframe src="https://maps.google.com/maps?q=Shree+Krishna+AC+Mall,+Dindoli,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2>We Stock 500+ Authentic Brands</h2>
+                <p>100% genuine products directly sourced from top national & global beauty brands.</p>
             </div>
 
+            <!-- BRAND BOARD SHOWCASE -->
+            <div class="brand-board-box">
+                <img src="images/brands-board.png" alt="BeautyQueen Brand Partners Board" onerror="this.src='https://placehold.co/1000x450/1a1a2e/e91e8b?text=BeautyQueen+Brand+Board'">
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="brand-filters">
+                <button class="brand-filter-btn active" data-filter="all">All Brands</button>
+                <button class="brand-filter-btn" data-filter="skincare">Skincare</button>
+                <button class="brand-filter-btn" data-filter="makeup">Makeup</button>
+                <button class="brand-filter-btn" data-filter="haircare">Hair Care</button>
+                <button class="brand-filter-btn" data-filter="fragrance">Fragrance</button>
+            </div>
+
+            <!-- BRANDS GRID -->
+            <div class="brands-grid" id="brandsGrid">
+                <!-- Makeup & General -->
+                <div class="brand-card" data-cat="makeup">
+                    <div class="brand-logo-text">L'Oréal Paris</div>
+                    <span class="brand-category-tag">Makeup & Hair Care</span>
+                </div>
+                <div class="brand-card" data-cat="makeup">
+                    <div class="brand-logo-text">Lakmé</div>
+                    <span class="brand-category-tag">Makeup & Skincare</span>
+                </div>
+                <div class="brand-card" data-cat="makeup">
+                    <div class="brand-logo-text">Maybelline New York</div>
+                    <span class="brand-category-tag">Makeup</span>
+                </div>
+                <div class="brand-card" data-cat="makeup">
+                    <div class="brand-logo-text">SUGAR Cosmetics</div>
+                    <span class="brand-category-tag">Makeup</span>
+                </div>
+
+                <div class="brand-card" data-cat="skincare">
+                    <div class="brand-logo-text">Nivea</div>
+                    <span class="brand-category-tag">Skincare & Body Care</span>
+                </div>
+                <div class="brand-card" data-cat="skincare">
+                    <div class="brand-logo-text">Neutrogena</div>
+                    <span class="brand-category-tag">Dermatological Skincare</span>
+                </div>
+                <div class="brand-card" data-cat="skincare">
+                    <div class="brand-logo-text">Biotique</div>
+                    <span class="brand-category-tag">Ayurvedic Skincare</span>
+                </div>
+                <div class="brand-card" data-cat="skincare">
+                    <div class="brand-logo-text">Himalaya Herbals</div>
+                    <span class="brand-category-tag">Natural Skincare</span>
+                </div>
+
+                <div class="brand-card" data-cat="haircare">
+                    <div class="brand-logo-text">Schwarzkopf Gliss</div>
+                    <span class="brand-category-tag">Hair Care & Repair</span>
+                </div>
+                <div class="brand-card" data-cat="haircare">
+                    <div class="brand-logo-text">Matrix Professional</div>
+                    <span class="brand-category-tag">Salon Hair Care</span>
+                </div>
+                <div class="brand-card" data-cat="haircare">
+                    <div class="brand-logo-text">Garnier</div>
+                    <span class="brand-category-tag">Hair Color & Care</span>
+                </div>
+                <div class="brand-card" data-cat="haircare">
+                    <div class="brand-logo-text">Dove</div>
+                    <span class="brand-category-tag">Body & Hair Care</span>
+                </div>
+
+                <div class="brand-card" data-cat="fragrance">
+                    <div class="brand-logo-text">Titan Skinn</div>
+                    <span class="brand-category-tag">Luxury Fragrances</span>
+                </div>
+                <div class="brand-card" data-cat="fragrance">
+                    <div class="brand-logo-text">Fogg</div>
+                    <span class="brand-category-tag">Deodorants & Perfumes</span>
+                </div>
+                <div class="brand-card" data-cat="fragrance">
+                    <div class="brand-logo-text">Yardley London</div>
+                    <span class="brand-category-tag">Classic Fragrances</span>
+                </div>
+                <div class="brand-card" data-cat="makeup">
+                    <div class="brand-logo-text">Colorbar</div>
+                    <span class="brand-category-tag">Luxury Cosmetics</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1063,15 +1025,25 @@
             });
         }
 
-        // Contact Form Submission Mock
-        const contactPageForm = document.getElementById('contactPageForm');
-        if(contactPageForm) {
-            contactPageForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for contacting BeautyQueen! We have received your message.');
-                contactPageForm.reset();
+        // Brand filtering
+        const filterBtns = document.querySelectorAll('.brand-filter-btn');
+        const brandCards = document.querySelectorAll('.brand-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                brandCards.forEach(card => {
+                    if(filter === 'all' || card.getAttribute('data-cat') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
-        }
+        });
 
         // Scroll to top
         const scrollTopBtn = document.getElementById('scrollTopBtn');

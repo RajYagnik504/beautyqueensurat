@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - BeautyQueen | Get In Touch</title>
+    <title>Beauty Tips & Trends - BeautyQueen Blog</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -262,161 +262,189 @@
             color: var(--secondary-color);
         }
 
-        /* CONTACT SECTION */
-        .contact-page-section {
+        /* BLOG SECTION */
+        .blog-page-section {
             padding: 70px 0;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
-        .contact-form-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-form-card h2 {
-            font-size: 26px;
+        .section-title h2 {
+            font-size: 32px;
             color: var(--primary-color);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        .contact-form-card p.desc {
+        .section-title p {
             color: var(--text-light);
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .form-group-c {
-            margin-bottom: 20px;
-        }
-
-        .form-group-c label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .form-group-c input,
-        .form-group-c textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: inherit;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-group-c input:focus,
-        .form-group-c textarea:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(233, 30, 139, 0.1);
-        }
-
-        .btn-contact-submit {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 600;
             font-size: 15px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
         }
 
-        .btn-contact-submit:hover {
-            background-color: #c21773;
-            transform: translateY(-2px);
-        }
-
-        /* RIGHT SIDE CONTACT CARDS + MAP */
-        .contact-info-map-column {
-            display: flex;
-            flex-direction: column;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .contact-cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .contact-card-box {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .contact-card-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(233, 30, 139, 0.1);
-            color: var(--secondary-color);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .contact-card-details h4 {
-            font-size: 15px;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-        }
-
-        .contact-card-details p,
-        .contact-card-details a {
-            color: var(--text-light);
-            font-size: 13px;
-            line-height: 1.5;
-        }
-
-        .contact-card-details a:hover {
-            color: var(--secondary-color);
-        }
-
-        .map-card-wrapper {
+        .blog-card {
             background: white;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
-            height: 380px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
-        .map-card-wrapper iframe {
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .blog-banner-gradient {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            position: relative;
+        }
+
+        .gradient-1 { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+        .gradient-2 { background: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%); }
+        .gradient-3 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        .gradient-4 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+        .gradient-5 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .gradient-6 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+
+        .blog-card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .blog-tag {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .blog-card h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-read-more {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .btn-read-more:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+
+        /* ARTICLE MODAL */
+        .article-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .article-modal-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .article-modal-box {
+            background: white;
+            width: 100%;
+            max-width: 650px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow-y: auto;
+            padding: 35px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            background: #f0f0f5;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article-modal-box h2 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .article-modal-box .meta {
+            font-size: 13px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .article-modal-box p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
         }
 
         /* FOOTER */
@@ -728,8 +756,8 @@
 
         /* RESPONSIVE */
         @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
@@ -743,7 +771,7 @@
         }
 
         @media (max-width: 576px) {
-            .form-row, .contact-cards-grid {
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid {
@@ -787,8 +815,8 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="brands.html">Brands</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html" class="active">Contact Us</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact Us</a>
             </nav>
             
             <div class="header-actions">
@@ -803,100 +831,130 @@
     <!-- PAGE BANNER -->
     <div class="page-banner">
         <div class="container">
-            <h1>Contact Us</h1>
+            <h1>Beauty Tips & Trends</h1>
             <div class="breadcrumbs">
-                <a href="index.html">Home</a> / <span>Contact Us</span>
+                <a href="index.html">Home</a> / <span>Blog</span>
             </div>
         </div>
     </div>
 
-    <!-- MAIN CONTACT SECTION -->
-    <section class="contact-page-section">
+    <!-- MAIN BLOG SECTION -->
+    <section class="blog-page-section">
         <div class="container">
-            
-            <div class="contact-grid">
-                <!-- LEFT FORM CARD -->
-                <div class="contact-form-card">
-                    <h2>Send Us a Message</h2>
-                    <p class="desc">Have questions about products, availability, or store location? Write to us and we'll get back to you promptly.</p>
+            <div class="section-title">
+                <h2>Latest From Our Experts</h2>
+                <p>Skincare guides, makeup tutorials, hair care secrets, and fragrance recommendations.</p>
+            </div>
 
-                    <form id="contactPageForm">
-                        <div class="form-row">
-                            <div class="form-group-c">
-                                <label>Your Name *</label>
-                                <input type="text" placeholder="Enter full name" required>
-                            </div>
-                            <div class="form-group-c">
-                                <label>Phone Number *</label>
-                                <input type="tel" placeholder="+91 XXXXX XXXXX" required>
-                            </div>
+            <div class="blog-grid">
+                <!-- ARTICLE 1 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-1">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>15 Aug 2026</span>
+                            <span class="blog-tag">Skincare</span>
                         </div>
-
-                        <div class="form-group-c">
-                            <label>Email Address *</label>
-                            <input type="email" placeholder="example@domain.com" required>
-                        </div>
-
-                        <div class="form-group-c">
-                            <label>Subject</label>
-                            <input type="text" placeholder="Product query, store info, etc.">
-                        </div>
-
-                        <div class="form-group-c">
-                            <label>Message *</label>
-                            <textarea rows="5" placeholder="Write your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-contact-submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
+                        <h3>10 Must-Have Skincare Products for Glowing Skin</h3>
+                        <p>Discover essential serums, moisturizers, and cleansers for a healthy, luminous complexion daily.</p>
+                        <button class="btn-read-more" onclick="openArticle('10 Must-Have Skincare Products for Glowing Skin', 'Skincare • 15 Aug 2026', 'Achieving radiant, glowing skin requires consistency and authentic skincare ingredients. At BeautyQueen, we recommend incorporating hyaluronic acid serums, vitamin C brightening creams, and gentle exfoliating cleansers into your morning and evening routines. Always end your routine with a broad-spectrum SPF to protect your natural glow!')">Read Article <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
 
-                <!-- RIGHT INFO & MAP -->
-                <div class="contact-info-map-column">
-                    <div class="contact-cards-grid">
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Store Location</h4>
-                                <p>Shop Num.92, Shree Krishna AC Mall, Dindoli, Surat 394210</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Phone Support</h4>
-                                <p><a href="tel:+919649978722">+91 96499 78722</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Email Us</h4>
-                                <p><a href="mailto:shreebalajienterprise092@gmail.com">shreebalaji enterprise092 @gmail.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-card-box">
-                            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
-                            <div class="contact-card-details">
-                                <h4>Store Hours</h4>
-                                <p>10:00 AM - 10:00 PM<br>(Every Day of Week)</p>
-                            </div>
-                        </div>
+                <!-- ARTICLE 2 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-2">
+                        <i class="fas fa-pump-soap"></i>
                     </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>28 Aug 2026</span>
+                            <span class="blog-tag">Hair Care</span>
+                        </div>
+                        <h3>Hair Care Routine: Tips for Healthy & Shiny Hair</h3>
+                        <p>Transform dull, damaged locks into shiny, voluminous hair with simple professional salon secrets.</p>
+                        <button class="btn-read-more" onclick="openArticle('Hair Care Routine: Tips for Healthy & Shiny Hair', 'Hair Care • 28 Aug 2026', 'Healthy hair starts from the scalp! Use sulfate-free shampoos and nourishing hair masks enriched with argan or keratin oils once a week. Protect your hair from heat styling damage using heat protectant sprays available at BeautyQueen store.')">Read Article <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
 
-                    <div class="map-card-wrapper">
-                        <iframe src="https://maps.google.com/maps?q=Shree+Krishna+AC+Mall,+Dindoli,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- ARTICLE 3 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-3">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>05 Sep 2026</span>
+                            <span class="blog-tag">Makeup</span>
+                        </div>
+                        <h3>Makeup Trends 2026: What's Hot This Season</h3>
+                        <p>Explore minimalist nude foundations, bold lip tints, and dewy blush looks dominating the season.</p>
+                        <button class="btn-read-more" onclick="openArticle('Makeup Trends 2026: What\'s Hot This Season', 'Makeup • 05 Sep 2026', 'This season is all about effortless glow and lightweight coverage! Tinted moisturizers, liquid blushes, and hydrated glossy lips are trending. Visit BeautyQueen to explore the latest foundation shades and long-lasting lipsticks from top global brands.')">Read Article <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 4 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-4">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>01 Sep 2026</span>
+                            <span class="blog-tag">Fragrances</span>
+                        </div>
+                        <h3>How to Choose Your Signature Fragrance</h3>
+                        <p>Learn the art of pulse points and fragrance notes to find the perfume that matches your personality.</p>
+                        <button class="btn-read-more" onclick="openArticle('How to Choose Your Signature Fragrance', 'Fragrances • 01 Sep 2026', 'Your fragrance is your personal memory card! From fresh floral top notes to deep woody base notes, finding your signature perfume depends on how the scent develops on your skin. Sample top perfumes at BeautyQueen Surat store today!')">Read Article <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 5 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-5">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>20 Aug 2026</span>
+                            <span class="blog-tag">Sun Care</span>
+                        </div>
+                        <h3>Sunscreen Myths Busted: Daily Protection Secrets</h3>
+                        <p>Why SPF 50+ is mandatory even on cloudy days and indoors for anti-aging skincare defense.</p>
+                        <button class="btn-read-more" onclick="openArticle('Sunscreen Myths Busted: Daily Protection Secrets', 'Sun Care • 20 Aug 2026', 'Never skip sunscreen! UV rays pass through windows and clouds, causing premature aging and dark spots. Apply two fingers length of gel or matte sunscreen every 3-4 hours for complete skin safety.')">Read Article <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 6 -->
+                <div class="blog-card">
+                    <div class="blog-banner-gradient gradient-6">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>10 Aug 2026</span>
+                            <span class="blog-tag">Self Care</span>
+                        </div>
+                        <h3>Weekly Pampering Routine for Busy Lifestyles</h3>
+                        <p>Quick 15-minute home facial and body scrub rituals to reset your skin over the weekend.</p>
+                        <button class="btn-read-more" onclick="openArticle('Weekly Pampering Routine for Busy Lifestyles', 'Self Care • 10 Aug 2026', 'Relax and recharge with a soothing sheet mask, body polish, and soothing eye gel. Pamper yourself with BeautyQueen\'s curated self-care kit designed for instant relaxation after a long week.')">Read Article <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+
+    <!-- ARTICLE READ MODAL -->
+    <div class="article-modal-backdrop" id="articleModal">
+        <div class="article-modal-box">
+            <button class="article-close-btn" onclick="closeArticle()"><i class="fas fa-times"></i></button>
+            <h2 id="modalTitle">Article Title</h2>
+            <div class="meta" id="modalMeta">Category • Date</div>
+            <p id="modalBody">Article content goes here...</p>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1063,13 +1121,26 @@
             });
         }
 
-        // Contact Form Submission Mock
-        const contactPageForm = document.getElementById('contactPageForm');
-        if(contactPageForm) {
-            contactPageForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for contacting BeautyQueen! We have received your message.');
-                contactPageForm.reset();
+        // Article Modal logic
+        const articleModal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMeta = document.getElementById('modalMeta');
+        const modalBody = document.getElementById('modalBody');
+
+        function openArticle(title, meta, text) {
+            modalTitle.innerText = title;
+            modalMeta.innerText = meta;
+            modalBody.innerText = text;
+            articleModal.classList.add('active');
+        }
+
+        function closeArticle() {
+            articleModal.classList.remove('active');
+        }
+
+        if(articleModal) {
+            articleModal.addEventListener('click', (e) => {
+                if(e.target === articleModal) closeArticle();
             });
         }
 
