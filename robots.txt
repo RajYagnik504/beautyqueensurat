@@ -1,0 +1,9 @@
+# User-agent rules for search engines
+User-agent: *
+Allow: /
+
+# Disallow search indexing of temporary or admin files if any
+Disallow: /*_temp.html
+
+# XML Sitemap location
+Sitemap: https://beautyqueensurat.co.in/sitemap.xml
