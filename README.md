@@ -9,7 +9,7 @@ Official responsive website for **BeautyQueen - The Cosmetic Store**, Dindoli, S
 
 ## Store Info
 - **Address**: Shop Num.92, Shree Krishna AC Mall, beside SMC Community Hall, near Flower Garden Road, Royal Star Township, Dindoli, Surat, Gujarat 394210
-- **Phone**: +91 96499 78722
+- **Phone**: +91 95128 70531
 - **Email**: shreebalajienterprise092@gmail.com
 - **Timings**: 10:00 AM - 10:00 PM (Every Day of Week)
 - **Copyright**: Rights are reserved by Shree Balaji Enterprise 2026
