@@ -12,4 +12,4 @@ Official responsive website for **BeautyQueen - The Cosmetic Store**, Dindoli, S
 - **Phone**: +91 95128 70531
 - **Email**: shreebalajienterprise092@gmail.com
 - **Timings**: 10:00 AM - 10:00 PM (Every Day of Week)
-- **Copyright**: Rights are reserved by Shree Balaji Enterprise 2026
+- **Ownership**: Beauty Queen Surat is owned and operated by SHREE BALAJI ENTERPRISE
