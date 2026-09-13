@@ -395,8 +395,8 @@
         
         /* 3. HERO SECTION */
         .hero {
-            padding: 0;
-            background-color: #fbcfe8;
+            padding: 25px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4a 100%);
             overflow: hidden;
             position: relative;
             width: 100%;
@@ -404,10 +404,16 @@
         
         .hero-banner-container {
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(233, 30, 139, 0.25);
+            border: 1px solid rgba(233, 30, 139, 0.3);
+            background-color: #1a1a2e;
         }
         
         .hero-banner-img {
@@ -415,7 +421,9 @@
             height: auto;
             display: block;
             object-fit: contain;
-            max-width: 100%;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            filter: contrast(106%) brightness(102%) saturate(106%);
         }
         
         /* 4. FEATURES STRIP */
