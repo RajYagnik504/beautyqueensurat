@@ -399,11 +399,11 @@
             cursor: pointer;
         }
         
-        /* 3. HERO SECTION (4K ULTRA HD FULL-WIDTH BANNER) */
+        /* 3. HERO SECTION (3K ULTRA HD RESPONSIVE BANNER) */
         .hero {
             padding: 0;
             margin: 0;
-            background-color: #ffeef6;
+            background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
             overflow: hidden;
             position: relative;
             width: 100%;
@@ -411,10 +411,12 @@
         
         .hero-banner-container {
             width: 100%;
-            max-width: 100%;
-            margin: 0;
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 0;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
         }
         
@@ -422,7 +424,7 @@
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
+            object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
