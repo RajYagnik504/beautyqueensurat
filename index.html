@@ -399,34 +399,352 @@
             cursor: pointer;
         }
         
-        /* 3. HERO SECTION (SINGLE BANNER IMAGE) */
-        .hero {
-            padding: 0;
-            margin: 0;
-            background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
-            overflow: hidden;
+        /* 3. HERO SECTION - MODERN LUXURY PREMIUM DESIGN */
+        .hero-modern {
             position: relative;
             width: 100%;
+            background: linear-gradient(135deg, #12091d 0%, #2a0826 40%, #1a0820 100%);
+            padding: 50px 0 30px 0;
+            overflow: hidden;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            border-bottom: 2px solid #e91e8b;
         }
-        
-        .hero-banner-container {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+
+        .hero-modern::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(233, 30, 139, 0.25) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-modern::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-modern-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             align-items: center;
-            background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
+            position: relative;
+            z-index: 2;
         }
-        
-        .hero-banner-img {
+
+        .hero-text-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .hero-badge-pill {
+            background: rgba(233, 30, 139, 0.15);
+            border: 1px solid rgba(233, 30, 139, 0.5);
+            color: #ff77c2;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(233, 30, 139, 0.2);
+        }
+
+        .hero-title-main {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .hero-title-main span.highlight {
+            background: linear-gradient(90deg, #ff77c2 0%, #d4a853 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle-desc {
+            font-size: 16px;
+            color: #d1c4e9;
+            line-height: 1.6;
+            font-weight: 400;
+            max-width: 520px;
+        }
+
+        .hero-highlights-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .hero-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14.5px;
+            color: #f3e5f5;
+            font-weight: 500;
+        }
+
+        .hero-highlight-item i {
+            color: #d4a853;
+            font-size: 16px;
+        }
+
+        .hero-cta-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-pink-glow {
+            background: linear-gradient(135deg, #e91e8b 0%, #c21570 100%);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(233, 30, 139, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-pink-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(233, 30, 139, 0.6);
+            color: #ffffff;
+        }
+
+        .btn-gold-outline {
+            background: transparent;
+            color: #d4a853;
+            border: 2px solid #d4a853;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .btn-gold-outline:hover {
+            background: #d4a853;
+            color: #12091d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 168, 83, 0.4);
+        }
+
+        /* RIGHT SLIDER SHOWCASE */
+        .hero-slider-showcase {
+            position: relative;
             width: 100%;
-            height: auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            background: #1e102a;
+        }
+
+        .hero-slides-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .hero-slide-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .hero-slide-item.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hero-slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            object-fit: contain;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
+        }
+
+        .hero-slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(18, 9, 29, 0.95) 0%, rgba(18, 9, 29, 0.5) 60%, rgba(0,0,0,0) 100%);
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .slide-info-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .slide-info-sub {
+            font-size: 13px;
+            color: #ff77c2;
+            font-weight: 500;
+        }
+
+        .slider-dots-nav {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            width: 30px;
+            border-radius: 10px;
+            background: #e91e8b;
+        }
+
+        /* BOTTOM FEATURES STRIP */
+        .hero-bottom-bar {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 16px 25px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bar-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(233, 30, 139, 0.2) 0%, rgba(212, 168, 83, 0.2) 100%);
+            border: 1px solid rgba(233, 30, 139, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff77c2;
+            font-size: 18px;
+        }
+
+        .bar-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .bar-sub {
+            font-size: 11.5px;
+            color: #b39ddb;
+        }
+
+        @media (max-width: 992px) {
+            .hero-modern-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-title-main {
+                font-size: 32px;
+            }
+            .hero-text-content {
+                align-items: center;
+                text-align: center;
+            }
+            .hero-subtitle-desc {
+                font-size: 14.5px;
+            }
+            .hero-highlights-list {
+                align-items: flex-start;
+                text-align: left;
+            }
+            .hero-cta-buttons {
+                justify-content: center;
+            }
+            .hero-slides-wrapper {
+                height: 300px;
+            }
+            .hero-bottom-bar {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-modern {
+                padding: 30px 0 20px 0;
+            }
+            .hero-title-main {
+                font-size: 26px;
+            }
+            .hero-slides-wrapper {
+                height: 240px;
+            }
+            .btn-pink-glow, .btn-gold-outline {
+                padding: 10px 22px;
+                font-size: 13.5px;
+                width: 100%;
+                justify-content: center;
+            }
+            .hero-bottom-bar {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 15px;
+            }
         }
         
         /* 4. FEATURES STRIP */
@@ -1717,10 +2035,131 @@
         </div>
     </header>
 
-    <!-- 3. HERO SECTION (SINGLE BANNER IMAGE) -->
-    <section class="hero">
-        <div class="hero-banner-container">
-            <img src="images/hero-banner.png?v=new_brand_banner_v10" alt="Beauty Queen The Cosmetic Store Banner" class="hero-banner-img">
+    <!-- 3. HERO SECTION - MODERN LUXURY PREMIUM DESIGN -->
+    <section class="hero-modern">
+        <div class="container">
+            <div class="hero-modern-grid">
+                <!-- LEFT CONTENT -->
+                <div class="hero-text-content">
+                    <div class="hero-badge-pill">
+                        <i class="fas fa-crown"></i> <span>DINDOLI SURAT'S #1 COSMETIC DESTINATION</span>
+                    </div>
+
+                    <h1 class="hero-title-main">
+                        Beauty Begins With <span class="highlight">Beauty Queen</span>
+                    </h1>
+
+                    <p class="hero-subtitle-desc">
+                        Surat's largest collection of 100% original cosmetics, skincare, haircare & luxury fragrances from 500+ top global & Indian brands.
+                    </p>
+
+                    <div class="hero-highlights-list">
+                        <div class="hero-highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Guaranteed Original & Authentic Products</span>
+                        </div>
+                        <div class="hero-highlight-item">
+                            <i class="fas fa-percent"></i>
+                            <span>365 Days Open — Unbeatable Discount Offers</span>
+                        </div>
+                        <div class="hero-highlight-item">
+                            <i class="fas fa-store"></i>
+                            <span>Shop 92, Shree Krishna AC Mall, Dindoli, Surat</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-buttons">
+                        <a href="#brands" class="btn-pink-glow">
+                            <span>Explore 500+ Brands</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#store" class="btn-gold-outline">
+                            <i class="fas fa-map-marker-alt"></i> <span>Visit Our Store</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SHOWCASE SLIDER -->
+                <div class="hero-slider-showcase">
+                    <div class="hero-slides-wrapper" id="heroSlidesWrapper">
+                        <div class="hero-slide-item active">
+                            <img src="images/slide1.png" alt="Lakme Makeup Collection">
+                            <div class="hero-slide-overlay">
+                                <div>
+                                    <div class="slide-info-title">Lakmé & Premium Cosmetics</div>
+                                    <div class="slide-info-sub">100% Original Makeup Range</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-item">
+                            <img src="images/slide2.png" alt="L'Oreal Hair Care Collection">
+                            <div class="hero-slide-overlay">
+                                <div>
+                                    <div class="slide-info-title">L'Oréal & Haircare Range</div>
+                                    <div class="slide-info-sub">Professional Salon Care</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-item">
+                            <img src="images/slide3.png" alt="Cetaphil Skincare Essentials">
+                            <div class="hero-slide-overlay">
+                                <div>
+                                    <div class="slide-info-title">Cetaphil & Dermat Skincare</div>
+                                    <div class="slide-info-sub">Gentle & Glowing Skin Care</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-item">
+                            <img src="images/store.png" alt="Beauty Queen Store Front">
+                            <div class="hero-slide-overlay">
+                                <div>
+                                    <div class="slide-info-title">Visit Beauty Queen Store</div>
+                                    <div class="slide-info-sub">Shree Krishna AC Mall, Dindoli</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDER DOTS NAV -->
+                    <div class="slider-dots-nav" id="sliderDotsNav">
+                        <div class="slider-dot active" onclick="setModernSlide(0)"></div>
+                        <div class="slider-dot" onclick="setModernSlide(1)"></div>
+                        <div class="slider-dot" onclick="setModernSlide(2)"></div>
+                        <div class="slider-dot" onclick="setModernSlide(3)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM FEATURE BAR -->
+            <div class="hero-bottom-bar">
+                <div class="bar-item">
+                    <div class="bar-icon"><i class="fas fa-crown"></i></div>
+                    <div>
+                        <div class="bar-title">500+ Top Brands</div>
+                        <div class="bar-sub">L'Oreal, Lakme, Cetaphil...</div>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-icon"><i class="fas fa-certificate"></i></div>
+                    <div>
+                        <div class="bar-title">100% Original</div>
+                        <div class="bar-sub">Guaranteed Authenticity</div>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-icon"><i class="fas fa-tags"></i></div>
+                    <div>
+                        <div class="bar-title">365 Days Open</div>
+                        <div class="bar-sub">Discount Offers All Year</div>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <div class="bar-title">Dindoli, Surat</div>
+                        <div class="bar-sub">Shree Krishna AC Mall</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2289,7 +2728,35 @@
                 if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                     navLinks.classList.remove('active');
                 }
+        // Modern Hero Showcase Slider Script
+        let modernSlideIndex = 0;
+        const modernSlides = document.querySelectorAll('.hero-slide-item');
+        const modernDots = document.querySelectorAll('.slider-dot');
+
+        function setModernSlide(idx) {
+            if (!modernSlides || modernSlides.length === 0) return;
+            modernSlideIndex = idx;
+            modernSlides.forEach((slide, i) => {
+                if (i === idx) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
             });
+            modernDots.forEach((dot, i) => {
+                if (i === idx) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        if (modernSlides && modernSlides.length > 0) {
+            setInterval(() => {
+                modernSlideIndex = (modernSlideIndex + 1) % modernSlides.length;
+                setModernSlide(modernSlideIndex);
+            }, 3500);
         }
     </script>
 </body>
