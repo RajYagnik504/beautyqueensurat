@@ -673,7 +673,7 @@
 
         @media (max-width: 1200px) {
             .hero-live-container {
-                grid-template-columns: 280px 1fr 260px;
+                grid-template-columns: 270px 1fr 250px;
                 gap: 15px;
             }
             .brand-grid-table {
@@ -682,24 +682,133 @@
         }
 
         @media (max-width: 992px) {
+            .hero {
+                padding: 18px 10px 14px 10px;
+            }
             .hero-live-container {
                 grid-template-columns: 1fr;
+                gap: 15px;
                 text-align: center;
             }
-            .hero-left, .hero-right {
+            .hero-left {
                 align-items: center;
+                text-align: center;
+            }
+            .hero-slogan {
+                max-width: 100%;
+                font-size: 13px;
+            }
+            .hero-brand-name {
+                font-size: 32px;
+            }
+            .hero-script-left {
+                font-size: 24px;
+            }
+            .hero-left-graphic img {
+                max-height: 100px;
             }
             .brand-grid-table {
                 grid-template-columns: repeat(4, 1fr);
+                gap: 4px;
+            }
+            .brand-tile {
+                min-height: 34px;
+                padding: 4px 1px;
+            }
+            .brand-name-txt {
+                font-size: 9.5px;
+            }
+            .brand-name-sub {
+                font-size: 6px;
+            }
+            .hero-right {
+                align-items: center;
+                margin-top: 5px;
+            }
+            .hero-script-right {
+                font-size: 26px;
+            }
+            .hero-model-box img {
+                max-height: 180px;
             }
             .strip-pill-container {
-                flex-direction: column;
-                gap: 8px;
-                border-radius: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                border-radius: 15px;
                 padding: 12px;
+            }
+            .strip-badge-item {
+                font-size: 11.5px;
+                justify-content: center;
+            }
+            .strip-badge-item i {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
             }
             .strip-sep {
                 display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 15px 8px 12px 8px;
+            }
+            .hero-logo-box img {
+                width: 55px;
+                height: 55px;
+            }
+            .hero-brand-name {
+                font-size: 26px;
+            }
+            .hero-brand-sub {
+                font-size: 11px;
+            }
+            .hero-slogan {
+                font-size: 11.5px;
+                line-height: 1.35;
+            }
+            .hero-offer-pill {
+                font-size: 10.5px;
+                padding: 6px 12px;
+            }
+            .brand-board-card {
+                padding: 10px 6px 12px 6px;
+                border-radius: 14px;
+            }
+            .brand-board-badge span {
+                font-size: 12px;
+                padding: 4px 15px;
+                letter-spacing: 1px;
+            }
+            .brand-grid-table {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3px;
+            }
+            .brand-tile {
+                min-height: 30px;
+                padding: 3px 1px;
+                border-radius: 4px;
+            }
+            .brand-name-txt {
+                font-size: 8.5px;
+            }
+            .brand-name-sub {
+                font-size: 5.5px;
+            }
+            .hero-model-box img {
+                max-height: 150px;
+            }
+            .strip-pill-container {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                padding: 10px 15px;
+            }
+            .strip-badge-item {
+                font-size: 11px;
+                justify-content: flex-start;
             }
         }
         
@@ -1683,7 +1792,16 @@
                 padding-bottom: 10px;
             }
             .mobile-menu-btn {
-                display: none !important;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                color: var(--secondary-color);
+                cursor: pointer;
+                padding: 6px 10px;
+                border: 1px solid #ffe3f0;
+                border-radius: 6px;
+                background: #fff0f6;
             }
             .header .container {
                 padding: 5px 15px;
@@ -1976,7 +2094,8 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
             
-            <div class="header-actions">
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
