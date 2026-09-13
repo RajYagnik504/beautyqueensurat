@@ -399,11 +399,11 @@
             cursor: pointer;
         }
         
-        /* 3. HERO SECTION */
+        /* 3. HERO SECTION (3.5K HD CRISP BANNER) */
         .hero {
             padding: 0;
             margin: 0;
-            background-color: #fbcfe8;
+            background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
             overflow: hidden;
             position: relative;
             width: 100%;
@@ -411,16 +411,22 @@
         
         .hero-banner-container {
             width: 100%;
-            max-width: 100%;
-            margin: 0;
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 0;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffeef6 0%, #ffc2db 100%);
         }
         
         .hero-banner-img {
             width: 100%;
             height: auto;
             display: block;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
         
         /* 4. FEATURES STRIP */
@@ -1704,7 +1710,7 @@
     <!-- 3. HERO SECTION (4K ULTRA HD BANNER) -->
     <section class="hero">
         <div class="hero-banner-container">
-            <img src="images/hero-banner.png?v=new_banner_v4" alt="Beauty Queen The Cosmetic Store Banner" class="hero-banner-img">
+            <img src="images/hero-banner.png?v=hd_3k_v5" alt="Beauty Queen The Cosmetic Store Banner" class="hero-banner-img">
         </div>
     </section>
 
