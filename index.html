@@ -583,6 +583,81 @@
             image-rendering: crisp-edges;
         }
 
+        /* Pure Vector Crisp Brand Badge Grid */
+        .brand-grid-pure {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7px;
+            padding: 8px;
+            background: #fafafa;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .b-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 6px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid #e5e5e5;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .b-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(233, 30, 139, 0.25);
+            border-color: #e91e8b;
+        }
+
+        .b-loreal { background: #1a1a2e; color: #ffffff; }
+        .b-maybelline { background: #fff0f6; color: #e91e8b; border-color: #f48fb1; }
+        .b-lakme { background: #3b1443; color: #d4a853; }
+        .b-colorbar { background: #222222; color: #ffffff; }
+        .b-sugar { background: #e91e8b; color: #ffffff; }
+        .b-renee { background: #000000; color: #ffffff; }
+        .b-swiss { background: #fffdf5; color: #b8860b; border-color: #ffe082; }
+        .b-raaga { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+        .b-cetaphil { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+        .b-sebamed { background: #ffebee; color: #c62828; border-color: #ef9a9a; }
+        .b-mamaearth { background: #e0f2f1; color: #00695c; border-color: #80cbc4; }
+        .b-neutrogena { background: #e1f5fe; color: #0277bd; border-color: #81d4fa; }
+        .b-plum { background: #f3e5f5; color: #6a1b9a; border-color: #ce93d8; }
+        .b-dotkey { background: #fce4ec; color: #c2185b; border-color: #f48fb1; }
+        .b-minimalist { background: #111111; color: #ffffff; }
+        .b-nivea { background: #0d47a1; color: #ffffff; }
+        .b-vaseline { background: #1565c0; color: #ffffff; }
+        .b-beardo { background: #212121; color: #ffffff; }
+        .b-streax { background: #b71c1c; color: #ffffff; }
+        .b-philips { background: #0d47a1; color: #ffffff; }
+        .b-vega { background: #ec407a; color: #ffffff; }
+        .b-ikonic { background: #000000; color: #ffffff; }
+        .b-bellavita { background: #fff8e1; color: #ff8f00; border-color: #ffe082; }
+        .b-himalaya { background: #e8f5e9; color: #1b5e20; border-color: #a5d6a7; }
+        .b-cerave { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
+        .b-garnier { background: #f1f8e9; color: #33691e; border-color: #c5e1a5; }
+        .b-simple { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+        .b-derma { background: #e0f2f1; color: #004d40; border-color: #80cbc4; }
+        .b-lotus { background: #e8f5e9; color: #1b5e20; border-color: #a5d6a7; }
+        .b-biotique { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+        .b-o3 { background: #d50000; color: #ffffff; }
+        .b-dove { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+        .b-wella { background: #c62828; color: #ffffff; }
+        .b-matrix { background: #4a148c; color: #ffffff; }
+        .b-schwarzkopf { background: #000000; color: #ffffff; }
+        .b-mcaffeine { background: #3e2723; color: #ffffff; }
+        .b-tresemme { background: #000000; color: #ffffff; }
+        .b-richfeel { background: #fff8e1; color: #b8860b; }
+        .b-godrej { background: #d32f2f; color: #ffffff; }
+
         /* Right Column */
         .hero-right {
             flex: 1.2;
@@ -1990,11 +2065,52 @@
                 <img src="images/hero-brushes.png" alt="Makeup Brushes" class="hero-brushes-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- CENTER COLUMN: BRAND PARTNERS BOARD (HD 1230px Resolution Image) -->
+            <!-- CENTER COLUMN: BRAND PARTNERS BOARD (100% VECTOR CRISP HTML GRID) -->
             <div class="hero-center">
                 <div class="brand-board-card">
-                    <div class="brand-board-header">OUR BRAND PARTNERS</div>
-                    <img src="images/hero-brand-board-hd.png" alt="45+ Top Brand Partners at Beauty Queen Surat" class="brand-board-hd-img">
+                    <div class="brand-board-header"><i class="fas fa-crown" style="color:#e91e8b;"></i> OUR BRAND PARTNERS</div>
+                    <div class="brand-grid-pure">
+                        <div class="b-badge b-loreal">L'Oréal Paris</div>
+                        <div class="b-badge b-maybelline">Maybelline</div>
+                        <div class="b-badge b-lakme">Lakmé 9to5</div>
+                        <div class="b-badge b-colorbar">Colorbar</div>
+                        <div class="b-badge b-sugar">Sugar Pop</div>
+                        <div class="b-badge b-renee">Renée</div>
+                        <div class="b-badge b-swiss">Swiss Beauty</div>
+                        <div class="b-badge b-raaga">Raaga</div>
+                        <div class="b-badge b-cetaphil">Cetaphil</div>
+                        <div class="b-badge b-sebamed">Sebamed</div>
+                        <div class="b-badge b-mamaearth">Mamaearth</div>
+                        <div class="b-badge b-neutrogena">Neutrogena</div>
+                        <div class="b-badge b-plum">Plum</div>
+                        <div class="b-badge b-dotkey">Dot & Key</div>
+                        <div class="b-badge b-minimalist">Minimalist</div>
+                        <div class="b-badge b-nivea">Nivea</div>
+                        <div class="b-badge b-vaseline">Vaseline</div>
+                        <div class="b-badge b-beardo">Beardo</div>
+                        <div class="b-badge b-streax">Streax</div>
+                        <div class="b-badge b-philips">Philips</div>
+                        <div class="b-badge b-vega">Vega</div>
+                        <div class="b-badge b-ikonic">Ikonic</div>
+                        <div class="b-badge b-bellavita">Bella Vita</div>
+                        <div class="b-badge b-himalaya">Himalaya</div>
+                        <div class="b-badge b-cerave">CeraVe</div>
+                        <div class="b-badge b-garnier">Garnier</div>
+                        <div class="b-badge b-simple">Simple</div>
+                        <div class="b-badge b-derma">The Derma Co</div>
+                        <div class="b-badge b-lotus">Lotus Herbals</div>
+                        <div class="b-badge b-biotique">Biotique</div>
+                        <div class="b-badge b-o3">O3+</div>
+                        <div class="b-badge b-dove">Dove</div>
+                        <div class="b-badge b-wella">Wella</div>
+                        <div class="b-badge b-matrix">Matrix</div>
+                        <div class="b-badge b-schwarzkopf">Schwarzkopf</div>
+                        <div class="b-badge b-mcaffeine">mCaffeine</div>
+                        <div class="b-badge b-tresemme">TRESemmé</div>
+                        <div class="b-badge b-richfeel">Richfeel</div>
+                        <div class="b-badge b-godrej">Godrej</div>
+                        <div class="b-badge b-maybelline">+ 450 More</div>
+                    </div>
                 </div>
             </div>
 
